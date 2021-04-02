@@ -58,7 +58,7 @@ C Code: Ported into C from MDsec's article on this topic: `https://www.mdsec.co.
 
 Compile with this command: `gcc WmiSub.c -o Wmisub.exe -lole32 -loleaut32 -lwbemuuid`
 
-If you run this code, all it does is make a test file saying success in your C:\, after you open notepad.exe.
+If you run this code, all it does is make a test file saying success in your C Drive, after you open notepad.exe.
 
 ```c
 #define _WIN32_DCOM
