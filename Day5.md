@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "7 days of Red- Day 6"
-date: 2021-3-19 18:40:20 -0400
+title: "7 days of Red- Day 5"
+date: 2021-4-4 00:00:00 -0400
 categories: Writeup
 
 ---
