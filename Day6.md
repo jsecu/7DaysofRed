@@ -69,7 +69,7 @@ int main(int argc,char **argv){
         Sleep(10000);
 
     }
-  printf("The key did not open ,executing malware\n",success);
+  printf("The key did not open ,executing malware\n");
    Sleep(1000);
 
 
@@ -81,7 +81,7 @@ LSTATUS success2 = RegOpenKeyEx(HKEY_CURRENT_USER,TEXT("\\SYSTEM\\ControlSet001\
 
     }
 
-   printf("The key did not open ,executing malware\n",success);
+   printf("The key did not open ,executing malware\n");
    Sleep(1000);
 
 
