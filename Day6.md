@@ -1,7 +1,4 @@
-layout: post
-title: "7 days of Red- Day 3"
-date: 2021-4-2 0:00:-00 -0400
-categories: Writeup
+
 
 
 
@@ -27,11 +24,6 @@ categories: Writeup
 
 
 ```
-
-
-
-
-
 
 
 ### Sandbox Evasion by Enumerating the Existence of Registry Keys
