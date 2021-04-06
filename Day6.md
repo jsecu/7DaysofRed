@@ -30,7 +30,7 @@
 
 #### Day 6
 
-As stated on Day 3, sandbox evasion is a fundamental apart of any attacker's strategy to infilrate a network. The chance of a peice of malware touching a virtual environment is extremely high since most host antivirus and email antivirus programs ultize that technique. In order for an attacker to identify a virtual environment they will employ a series of checks included in their stage 0 payload. In this post we'll discuss enumerating registry keys and checking for artifcats to indicate a virtual environment.There are a number of virtual environment software such as VMware,VirtualBox,Sandboxie,Wine,Xen and many more. For each of these environments there are registry keys identifying them and their particular settings. For Example:
+As stated on Day 3, sandbox evasion is a fundamental apart of any attacker's strategy to infilrate a network. The chance of a piece of malware touching a virtual environment is extremely high since most host antivirus and email antivirus programs utilize a sandbox. In order for an attacker to identify a virtual environment they will employ a series of checks included in their stage 0 payload. In this post we'll discuss enumerating registry keys and checking for artifacts to indicate a virtual environment.There are a number of virtual environment software such as VMware,VirtualBox,Sandboxie,Wine,Xen and many more. For each of these environments there are registry keys identifying them and their particular settings. For Example:
 
 #### VMWare:
 
