@@ -33,13 +33,16 @@
 
 For the last day of 7daysofRed, we're going to be covering LDAP queries.These are used in almost every Active Directory enumeration tool, such as PowerView and BloodHound. In an Active Directory environment there are several protocols that are used in order to transmit data ,two of the major ones being  Kerberos and LDAP. Since we are addressing LDAP in this post, Kerberos is out of scope for now. LDAP stands for Lightweight Directory Access Protocol, and its server is usually hosted on a domain controller. A domain controller is where all your data for every domain user ,group and host lives in the form of objects,and ntds.dit being the Active Directory Database file is also stored in the domain controller. LDAP is usually used to query these objects from the domain controller through the use of LDAP queries. In most cases once you have access to any authenicated user on a network, you can query the domain controller through LDAP. Having a look at LDAP user search request in wireshark may shed some light on what's going on when you send a query out to a domain controller. 
 
-![User-added image](https://support.citrix.com/files/public/support/article/CTX200252/images/0EM60000000PiEN.png)
+![image](https://user-images.githubusercontent.com/55005881/113821379-06a85000-974a-11eb-975f-d4eb4383b8ef.png)
+
+
 
 In this capture you can see the search base or domain where the query is to be constrained to, "dc=ragee,dc=local". You can also see that the scope requested was the wholeSubtree,which indicates that the search base and all entries under it will be included in the search results.The next revelant field would be the filter, which constrains the search results even further and only specifies a certain user. The filter here is `(&(samAccountName=user001)(objectClass=*)`, and its filtering the inital results for user001 and returning all the user attributes associated with that user.The attributes requested are listed under that in the attributes section.This is the response to this query:
 
+![image](https://user-images.githubusercontent.com/55005881/113821405-0dcf5e00-974a-11eb-8dd8-631ef59c1454.png)
 
 
-![User-added image](https://support.citrix.com/files/public/support/article/CTX200252/images/0EM60000000PiES.png)
+
 
 As you can see the information was returned for each user attribute requested for the user user001.
 
