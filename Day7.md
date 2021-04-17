@@ -74,7 +74,7 @@ namespace GetDomainUsers
                 //Create ldap searcher
                 DirectorySearcher searcher = new DirectorySearcher(ldapconn);
                 //Attach ldapquery filter
-                searcher.Filter="(&(objectClass=user)(sAMAccountName="+user+")";
+                searcher.Filter="(&(objectClass=user)(sAMAccountName="+user+"))";
                 //Gets Result
                 SearchResult result = searcher.FindOne();
                 if (result != null)
